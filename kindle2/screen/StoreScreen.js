@@ -14,7 +14,9 @@ const StoreScreen=()=>{
             {/*header*/}
             <View style={styles.container1}>
                 <Text style={styles.storetext}>KINDLE STORE</Text>
+                    <TouchableOpacity>
                     <Image source={bell} style={styles.bell}/>
+                    </TouchableOpacity>
             </View>
 
             <ScrollView showsVerticalScrollIndicator={false} >

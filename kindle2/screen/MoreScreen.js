@@ -1,8 +1,6 @@
 import React,{useState} from 'react'
 import { View,TextInput,StyleSheet,Image,Text,TouchableOpacity} from 'react-native'
-
-var search=require('../img/icons/search.png')
-var bell=require('../img/icons/Bell-icon.png')
+import Header from '../components/header'
 var user=require('../img/More/user.png')
 var sync=require('../img/More/sync.png')
 var setting=require('../img/More/setting.png')
@@ -13,20 +11,7 @@ const MoreScreen =()=>{
   const [value,setValue] = useState("")
         return (
             <View >
-              <View style={styles.container1}>
-                    <View style={styles.header}>
-                        <Image source={search} style={{width:27,height:27,alignItems: 'center',marginTop:10}}/>
-                        <TextInput 
-                            style={{flex:1}}
-                            placeholder="Search Kindle"
-                            placeholderTextColor="#636e72"
-                            color="#636e72"
-                            value={value}
-                            onChangeText={(text)=>setValue(text)}
-                        />
-                    </View>
-                    <Image source={bell} style={styles.bell}/>
-                </View>
+              <Header></Header>
             
            <View >
              <TouchableOpacity><View style={{flexDirection:'row',padding:12,marginLeft:10}}>

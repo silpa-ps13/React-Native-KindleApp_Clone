@@ -1,31 +1,12 @@
 import React,{useState} from 'react'
-import { Text, View,Image,TouchableOpacity,TextInput,StyleSheet} from 'react-native'
+import { Text, View,Image,TouchableOpacity,StyleSheet} from 'react-native'
+import Header from '../components/header'
 var lib=require('../img/lib.png')
-var search=require('../img/icons/search.png')
-var bell=require('../img/icons/Bell-icon.png')
 const LibraryScreen =()=>{
     const [value,setValue] = useState("")
         return (
             <View>
-
-                {/*header*/}
-
-              <View style={styles.container1}>
-                    <View style={styles.header}>
-                        <Image source={search} style={styles.search}/>
-                        <TextInput 
-                            style={{flex:1}}
-                            placeholder="Search Kindle"
-                            placeholderTextColor="#636e72"
-                            color="#636e72"
-                            value={value}
-                            onChangeText={(text)=>setValue(text)}
-                        />
-                    </View>
-                    <Image source={bell} style={styles.bell}/>
-                </View>
-
-
+                <Header></Header>
                 {/*body*/}
                 <View style={{alignItems:'center'}}>
                     <Image source={lib} style={styles.libImage}/>
